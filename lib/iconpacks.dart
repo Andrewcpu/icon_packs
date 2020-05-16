@@ -21,7 +21,9 @@ class IconPacks {
 
   static Future<Image> getIcon(String packageName, String iconPackPackage, {double width = 50, double height = 50}) async{
     var args = {'application': packageName, 'icon_pack': iconPackPackage};
-    Uint8List list = await _channel.invokeMethod("getIcon", args);
+    var val = await _channel.invokeMethod("getIcon", args);
+    if (val is String) return null;
+    Uint8List list = val;
     return Image.memory(list, width: width, height: height, fit: BoxFit.contain,);
   }
 
