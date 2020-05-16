@@ -1,8 +1,7 @@
 name: iconpacks
 description: An interface for Android developers to interact with Icon Packs installed on a users device.
 version: 0.0.1
-author:
-homepage:
+homepage: https://github.com/AndrewCPU/icon_packs
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
